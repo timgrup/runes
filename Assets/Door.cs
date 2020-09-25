@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class Door : Interactable
 {
+    public Animator _animator;
     bool open;
 
     public override void Interact()
     {
         open = !open;
 
-        if(!open)
-        {
-            transform.rotation = Quaternion.Euler(Vector3.up * 90);
-        } else
-        {
-            transform.rotation = Quaternion.Euler(Vector3.up * 0);
-        }
+        _animator.SetBool("open", open);
     }
 
 }

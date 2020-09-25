@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2941444580132734261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.27, z: 0}
   m_LocalScale: {x: 1, y: 1.8, z: 1}
   m_Children: []
   m_Father: {fileID: 2941444580590092157}
@@ -138,7 +138,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2941444580582224170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.013, z: 0.73}
+  m_LocalPosition: {x: 0, y: 1.013, z: 0.222}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2941444580590092157}
@@ -256,12 +256,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 3.6
-  m_Radius: 0.5
+  m_Radius: 0.6
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.25, z: 0}
 --- !u!114 &2941444580590092147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,6 +274,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc2573d21becc54abe4d3dd55e0de1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionMask:
+    serializedVersion: 2
+    m_Bits: 512
+  focus: {fileID: 0}
   speed: 12
   jumpHeight: 2.5
   gravity: -19.62
