@@ -64,13 +64,14 @@ public class PlayerController : MonoBehaviour
                     Debug.Log("Interaction available");
                     SetFocus(interactable);
                 }
-            } else
-            {
-                RemoveFocus();
             }
         }
+        else
+        {
+            RemoveFocus();
+        }
 
-        if(Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && focus != null)
         {
             focus.StartInteraction();
         }
@@ -81,9 +82,9 @@ public class PlayerController : MonoBehaviour
 
     void SetFocus(Interactable newFocus)
     {
-        if(newFocus != focus)
+        if (newFocus != focus)
         {
-            if(focus != null)
+            if (focus != null)
             {
                 focus.OnDefocused();
             }
@@ -95,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
     void RemoveFocus()
     {
-        if(focus != null)
+        if (focus != null)
         {
             focus.OnDefocused();
 

@@ -6,6 +6,7 @@ public class Interactable : MonoBehaviour
 {
     [SerializeField] float radius = 3.0f;
     public Transform target;
+    public Transform interactionTransform;
 
     bool hasInteracted;
     bool interact;
@@ -35,7 +36,7 @@ public class Interactable : MonoBehaviour
     //Returns true, if target interacting with is in radius
     public bool isReachable(Transform target)
     {
-        float distance = Vector3.Distance(target.position, transform.position);
+        float distance = Vector3.Distance(target.position, interactionTransform.position);
         if(distance <= radius)
         {
             return true;
@@ -70,6 +71,6 @@ public class Interactable : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, radius);
+        Gizmos.DrawWireSphere(interactionTransform.position, radius);
     }
 }
