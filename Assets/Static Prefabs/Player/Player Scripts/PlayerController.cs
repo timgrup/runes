@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask interactionMask;
     public Interactable focus;
+    public float interactRadius = 1.0f;
 
     void Awake()
     {
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, interactionMask))
+        if (Physics.SphereCast(ray, interactRadius, out hit, Mathf.Infinity, interactionMask))
         {
             Interactable interactable = hit.collider.GetComponent<Interactable>();
             if (interactable != null)
@@ -48,6 +49,9 @@ public class PlayerController : MonoBehaviour
                 {
                     Debug.Log("Interaction available");
                     SetFocus(interactable);
+                } else
+                {
+                    RemoveFocus();
                 }
             }
         }
@@ -62,7 +66,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void SetFocus(Interactable newFocus)
+    public void SetFocus(Interactable newFocus)
     {
         if (newFocus != focus)
         {
@@ -72,17 +76,25 @@ public class PlayerController : MonoBehaviour
             }
 
             focus = newFocus;
+
+            if(newFocus.GetType() == typeof(ItemPickup))
+            {
+                UIItemNameDisplay.instance.SetActive();
+                UIItemNameDisplay.instance.MoveToItem((ItemPickup)newFocus);
+            }
         }
         newFocus.OnFocused(transform);
     }
 
-    void RemoveFocus()
+    public void RemoveFocus()
     {
         if (focus != null)
         {
             focus.OnDefocused();
 
             focus = null;
+
+            UIItemNameDisplay.instance.SetDeactive();
         }
     }
 
