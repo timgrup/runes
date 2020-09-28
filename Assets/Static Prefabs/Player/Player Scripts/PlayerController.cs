@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
             movement.Jump();
         }
 
+        //ToDo: Raycast vielleicht ungenau Winkelbezogen
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.SphereCast(ray, interactRadius, out hit, Mathf.Infinity, interactionMask))
