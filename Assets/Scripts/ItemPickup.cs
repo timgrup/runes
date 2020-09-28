@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ItemPickup : Interactable
 {
-    public Item item;
-    public PlayerController pc;
+    PlayerController pc;
 
+    public Item item;
     public float uiTextOffset = 1.0f;
 
-    void Awake()
+    void Start()
     {
         pc = PlayerManager.instance.player.GetComponent<PlayerController>();
     }

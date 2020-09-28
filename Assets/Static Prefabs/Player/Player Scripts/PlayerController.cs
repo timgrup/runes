@@ -48,9 +48,10 @@ public class PlayerController : MonoBehaviour
             {
                 if (interactable.CanInteract(transform))
                 {
-                    Debug.Log("Interaction available");
+                    Debug.Log("Interaction available with: " + interactable.name);
                     SetFocus(interactable);
-                } else
+                }
+                else
                 {
                     RemoveFocus();
                 }
@@ -78,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
             focus = newFocus;
 
-            if(newFocus.GetType() == typeof(ItemPickup))
+            if (newFocus.GetType() == typeof(ItemPickup))
             {
                 UIItemNameDisplay.instance.SetActive();
                 UIItemNameDisplay.instance.MoveToItem((ItemPickup)newFocus);
@@ -92,11 +93,8 @@ public class PlayerController : MonoBehaviour
         if (focus != null)
         {
             focus.OnDefocused();
-
             focus = null;
-
             UIItemNameDisplay.instance.SetDeactive();
         }
     }
-
 }
