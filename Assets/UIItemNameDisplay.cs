@@ -36,7 +36,7 @@ public class UIItemNameDisplay : MonoBehaviour
     public void MoveToItem(ItemPickup itemPickup)
     {
         text.text = itemPickup.item.name;
-        transform.position = itemPickup.transform.position + new Vector3(0, 0.75f, 0);
+        transform.position = itemPickup.transform.position + new Vector3(0, itemPickup.uiTextOffset, 0);
         //ToDo: Find actual height of item
     }
 

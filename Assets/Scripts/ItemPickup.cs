@@ -7,6 +7,8 @@ public class ItemPickup : Interactable
     public Item item;
     public PlayerController pc;
 
+    public float uiTextOffset = 1.0f;
+
     void Awake()
     {
         pc = PlayerManager.instance.player.GetComponent<PlayerController>();

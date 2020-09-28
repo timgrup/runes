@@ -501,6 +501,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 1232992474}
   item: {fileID: 11400000, guid: d59169fbbd9d11148bbe8e2b0eaa4038, type: 2}
   pc: {fileID: 0}
+  uiTextOffset: 0.75
 --- !u!135 &1232992471
 SphereCollider:
   m_ObjectHideFlags: 0
