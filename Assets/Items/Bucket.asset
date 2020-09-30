@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6b8166921f0df145a4d47567887dc57, type: 3}
   m_Name: Bucket
   m_EditorClassIdentifier: 
-  name: New Item
+  name: Wooden Bucket
   description: 
   icon: {fileID: 0}
