@@ -35,9 +35,10 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(moveDirection * speed * Time.deltaTime);
         if (jump && isGrounded)
         {
-            jump = false;
             AddJumpVelocity();
         }
+        jump = false;
+
         AddGravityVelocity();
         ApplyVelocity();
     }

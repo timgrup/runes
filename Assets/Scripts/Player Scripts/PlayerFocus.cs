@@ -1,22 +1,13 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerMovement))]
-public class PlayerController : MonoBehaviour
+public class PlayerFocus : MonoBehaviour
 {
-    PlayerMovement movement;
     Camera cam;
-
-    public LayerMask interactionMask;
-    public Interactable focus;
-    public float interactRadius = 1.0f;
-
-    void Awake()
-    {
-        movement = GetComponent<PlayerMovement>();
-    }
+    [SerializeField] float interactRadius = 1.0f;
+    [SerializeField] LayerMask interactionMask;
+    private Interactable focus;
 
     void Start()
     {
@@ -25,23 +16,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //Get Input
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-
-        //Move
-        Vector3 move = transform.right * x + transform.forward * z;
-        movement.Move(move);
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            movement.Jump();
-        }
-
-        //ToDo: Raycast vielleicht ungenau Winkelbezogen
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        Debug.DrawRay(ray.origin, ray.direction, Color.green);
         RaycastHit hit;
-        if (Physics.SphereCast(ray, interactRadius, out hit, Mathf.Infinity, interactionMask))
+        bool sphereCast = Physics.SphereCast(ray, interactRadius, out hit, Mathf.Infinity, interactionMask);
+        bool rayCast = false;
+
+        if (!sphereCast)
+            rayCast = Physics.Raycast(ray, out hit, Mathf.Infinity, interactionMask);
+
+        if (sphereCast || rayCast)
         {
             Interactable interactable = hit.collider.GetComponent<Interactable>();
             if (interactable != null)
@@ -61,11 +45,6 @@ public class PlayerController : MonoBehaviour
         {
             RemoveFocus();
         }
-
-        if (Input.GetMouseButtonDown(1) && focus != null)
-        {
-            focus.StartInteraction();
-        }
     }
 
     public void SetFocus(Interactable newFocus)
@@ -79,7 +58,8 @@ public class PlayerController : MonoBehaviour
 
             focus = newFocus;
 
-            if (newFocus.GetType() == typeof(ItemPickup))
+            //ToDo: if Abfrage verbessern
+            if (newFocus.GetType() == typeof(ItemPickup) || newFocus.GetType().IsSubclassOf(typeof(ItemPickup)))
             {
                 UIItemNameDisplay.instance.SetActive();
                 UIItemNameDisplay.instance.MoveToItem((ItemPickup)newFocus);
@@ -96,5 +76,10 @@ public class PlayerController : MonoBehaviour
             focus = null;
             UIItemNameDisplay.instance.SetDeactive();
         }
+    }
+
+    public Interactable GetFocus()
+    {
+        return this.focus;
     }
 }

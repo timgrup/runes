@@ -5,9 +5,9 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     [SerializeField] float radius = 3.0f;
-    public Transform target;
     public Transform interactionTransform;
 
+    Transform target;
     protected bool hasInteracted;
     protected bool interact;
     protected bool isFocus;
