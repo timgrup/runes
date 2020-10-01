@@ -58,7 +58,7 @@ public class PlayerFocus : MonoBehaviour
 
             focus = newFocus;
 
-            //ToDo: if Abfrage verbessern
+            //TODO: if Abfrage verbessern
             if (newFocus.GetType() == typeof(ItemPickup) || newFocus.GetType().IsSubclassOf(typeof(ItemPickup)))
             {
                 UIItemNameDisplay.instance.SetActive();

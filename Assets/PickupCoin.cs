@@ -24,5 +24,6 @@ public class PickupCoin : ItemPickup
     {
         yield return new WaitForSeconds(anim.runtimeAnimatorController.animationClips[0].length);
         base.Interact();
+        CurrencyManager.instance.Add(1);
     }
 }
