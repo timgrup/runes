@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class ItemPickup : Interactable
 {
-    public Item item;
-    public PlayerController pc;
+    protected PlayerFocus playerFocus;
 
+    public Item item;
     public float uiTextOffset = 1.0f;
 
-    void Awake()
+    protected void Start()
     {
-        pc = PlayerManager.instance.player.GetComponent<PlayerController>();
+        playerFocus = PlayerManager.instance.player.GetComponent<PlayerFocus>();
     }
 
     public override void Interact()
     {
         Debug.Log("Picking up: " + item.name);
-        pc.RemoveFocus();
+        playerFocus.RemoveFocus();
         Destroy(gameObject);
     }
 }

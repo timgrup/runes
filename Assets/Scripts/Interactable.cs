@@ -5,12 +5,12 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     [SerializeField] float radius = 3.0f;
-    public Transform target;
     public Transform interactionTransform;
 
-    bool hasInteracted;
-    bool interact;
-    bool isFocus;
+    Transform target;
+    protected bool hasInteracted;
+    protected bool interact;
+    protected bool isFocus;
 
     private void Update()
     {
@@ -34,7 +34,7 @@ public class Interactable : MonoBehaviour
     }
 
     //Returns true, if target interacting with is in radius
-    public bool isReachable(Transform target)
+    public bool IsReachable(Transform target)
     {
         float distance = Vector3.Distance(target.position, interactionTransform.position);
         if(distance <= radius)
@@ -49,7 +49,7 @@ public class Interactable : MonoBehaviour
     //Returns true, if target may interact with this interactable
     public virtual bool CanInteract(Transform target)
     {
-        return isReachable(target);
+        return IsReachable(target);
     }
 
     // Called when the object starts being focused
