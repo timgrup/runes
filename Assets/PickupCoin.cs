@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PickupCoin : ItemPickup
 {
-    Animator anim;
+    private Animator anim;
+    private CurrencyManager currencyManager;
 
     new void Start()
     {
         base.Start();
         anim = GetComponent<Animator>();
+        currencyManager = GetComponent<CurrencyManager>();
     }
 
     public override void Interact()
@@ -24,6 +26,6 @@ public class PickupCoin : ItemPickup
     {
         yield return new WaitForSeconds(anim.runtimeAnimatorController.animationClips[0].length);
         base.Interact();
-        CurrencyManager.instance.Add(1);
+        currencyManager.Add(1);
     }
 }

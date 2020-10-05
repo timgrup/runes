@@ -8,11 +8,13 @@ public class PlayerController : MonoBehaviour
 {
     PlayerMovement movement;
     PlayerFocus playerFocus;
+    PlayerAnimator playerAnimator;
 
     void Awake()
     {
         movement = GetComponent<PlayerMovement>();
         playerFocus = GetComponent<PlayerFocus>();
+        playerAnimator = GetComponent<PlayerAnimator>();
     }
 
     void Update()
@@ -28,6 +30,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             movement.Jump();
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            playerAnimator.PlayAttackAnimation();
         }
 
         Interactable focus = playerFocus.GetFocus();
