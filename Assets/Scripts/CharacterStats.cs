@@ -40,6 +40,10 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void Die()
     {
-        Debug.Log(transform.name + " died.");
+        EnemyController ec = GetComponent<EnemyController>();
+        if (ec != null)
+        {
+            ec.PlayDeath();
+        }
     }
 }
