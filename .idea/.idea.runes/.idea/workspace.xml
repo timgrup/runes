@@ -26,22 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="789b34ab-fd42-46af-ab66-dcd33df8b93c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Sword.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Sword.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.runes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.runes/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.runes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.runes/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterStats.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nameplate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nameplate.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stat.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIItemNameDisplay.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIItemNameDisplay.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +40,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/IWeapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ICharacter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -65,8 +53,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/IWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Sword.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CharacterStats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ICharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CharacterStats.cs" />
       </list>
     </option>
   </component>
@@ -111,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601902620779</updated>
       <workItem from="1601902625840" duration="1802000" />
-      <workItem from="1601931581131" duration="3492000" />
+      <workItem from="1601931581131" duration="4738000" />
     </task>
     <servers />
   </component>
@@ -148,10 +137,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1047" y="424" key="RiderGenerateDialog" timestamp="1601932127496">
+    <state x="1047" y="424" key="RiderGenerateDialog" timestamp="1601940622585">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1047" y="424" key="RiderGenerateDialog/0.0.2560.1400/-2560.-18.2560.1400@0.0.2560.1400" timestamp="1601932127496" />
+    <state x="1047" y="424" key="RiderGenerateDialog/0.0.2560.1400/-2560.-18.2560.1400@0.0.2560.1400" timestamp="1601940622585" />
     <state x="781" y="345" key="SettingsEditor" timestamp="1601904277345">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

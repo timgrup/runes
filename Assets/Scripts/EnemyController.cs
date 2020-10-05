@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyController : MonoBehaviour
+[RequireComponent(typeof(NavMeshAgent))]
+public class EnemyController : MonoBehaviour, ICharacter
 {
     private NavMeshAgent agent;
     private Animator animator;
@@ -37,7 +38,6 @@ public class EnemyController : MonoBehaviour
         }
         
         animator.SetFloat("Speed", agent.velocity.magnitude);
-        Debug.Log(agent.velocity.magnitude);
     }
 
     private void FaceTarget()
@@ -47,16 +47,16 @@ public class EnemyController : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
-    public void PlayDeath()
-    {
-        animator.SetTrigger("Die");
-        GetComponent<Collider>().enabled = false;
-        alive = false;
-    }
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, chaseDistance);
+    }
+    
+    public void Die()
+    {
+        animator.SetTrigger("Die");
+        GetComponent<Collider>().enabled = false;
+        alive = false;
     }
 }

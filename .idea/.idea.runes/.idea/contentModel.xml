@@ -19,6 +19,7 @@
           <e p="CurrencyManager.cs" t="Include" />
           <e p="Door.cs" t="Include" />
           <e p="EnemyController.cs" t="Include" />
+          <e p="ICharacter.cs" t="Include" />
           <e p="ItemPickup.cs" t="Include" />
           <e p="PickupCoin.cs" t="Include" />
           <e p="Player" t="Include">
