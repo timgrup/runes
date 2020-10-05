@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PickupCoin : ItemPickup
 {
@@ -13,7 +14,7 @@ public class PickupCoin : ItemPickup
         anim = GetComponent<Animator>();
         currencyManager = GetComponent<CurrencyManager>();
     }
-
+    
     public override void Interact()
     {
         playerFocus.RemoveFocus();

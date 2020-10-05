@@ -6,19 +6,19 @@
     <e p="C:\Users\tgrup\Documents\Unity Projekte\GIT\runes" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="CurrencyManager.cs" t="Include" />
-        <e p="EnemyController.cs" t="Include" />
-        <e p="Nameplate.cs" t="Include" />
-        <e p="PickupCoin.cs" t="Include" />
-        <e p="PlayerAnimator.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="CharacterStats.cs" t="Include" />
+          <e p="CurrencyManager.cs" t="Include" />
           <e p="Door.cs" t="Include" />
+          <e p="EnemyController.cs" t="Include" />
           <e p="Interactable.cs" t="Include" />
           <e p="Item.cs" t="Include" />
           <e p="ItemPickup.cs" t="Include" />
-          <e p="Player Scripts" t="Include">
+          <e p="Nameplate.cs" t="Include" />
+          <e p="PickupCoin.cs" t="Include" />
+          <e p="Player" t="Include">
             <e p="MouseCamLook.cs" t="Include" />
+            <e p="PlayerAnimator.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="PlayerFocus.cs" t="Include" />
             <e p="PlayerManager.cs" t="Include" />
