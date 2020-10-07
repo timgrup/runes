@@ -4,17 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerMovement))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, ICharacter
 {
     PlayerMovement movement;
     PlayerFocus playerFocus;
-    PlayerAnimator playerAnimator;
+    Animator animator;
+    public bool alive { get; private set; }
 
     void Awake()
     {
         movement = GetComponent<PlayerMovement>();
         playerFocus = GetComponent<PlayerFocus>();
-        playerAnimator = GetComponent<PlayerAnimator>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -32,15 +33,21 @@ public class PlayerController : MonoBehaviour
             movement.Jump();
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)) //Mouse Left Click
         {
-            playerAnimator.PlayAttackAnimation();
+            //ToDo: Add Attack
         }
 
         Interactable focus = playerFocus.GetFocus();
-        if (Input.GetMouseButtonDown(1) && focus != null)
+        if (Input.GetMouseButtonDown(1) && focus != null) //Mouse Right Click if player has focus
         {
             focus.StartInteraction();
         }
+    }
+
+    public void Die()
+    {
+        alive = false;
+        enabled = false;
     }
 }

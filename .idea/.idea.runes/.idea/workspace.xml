@@ -26,8 +26,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="789b34ab-fd42-46af-ab66-dcd33df8b93c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ICharacter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.runes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.runes/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.runes/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.runes/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.runes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.runes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Warrok Animator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Warrok Animator.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DevScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DevScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/IWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/IWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Stat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Stat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ICharacter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ICharacter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ICharacter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sword.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sword.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Static Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Static Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +57,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/IWeapon.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ICharacter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94777608-5C2A-45BE-BC6A-FA3092A3F6ED/3d/9070d510/Animator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterCombat.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/ICharacter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AttackBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -50,11 +71,16 @@
         <option value="$PROJECT_DIR$/Assets/PickupCoin.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/IWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Sword.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ICharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Stat.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyCombat.cs" />
+        <option value="$PROJECT_DIR$/Assets/AttackBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterStats.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/IWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CharacterCombat.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ICharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Sword.cs" />
       </list>
     </option>
   </component>
@@ -67,6 +93,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -100,6 +127,10 @@
       <updated>1601902620779</updated>
       <workItem from="1601902625840" duration="1802000" />
       <workItem from="1601931581131" duration="5204000" />
+      <workItem from="1602002602552" duration="942000" />
+      <workItem from="1602013473890" duration="5465000" />
+      <workItem from="1602019180863" duration="5875000" />
+      <workItem from="1602055305484" duration="14731000" />
     </task>
     <servers />
   </component>
@@ -136,17 +167,25 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1047" y="424" key="RiderGenerateDialog" timestamp="1601940622585">
+    <state x="1047" y="424" key="RiderGenerateDialog" timestamp="1602068476875">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1047" y="424" key="RiderGenerateDialog/0.0.2560.1400/-2560.-18.2560.1400@0.0.2560.1400" timestamp="1601940622585" />
+    <state x="1047" y="424" key="RiderGenerateDialog/0.0.2560.1400/-2560.-18.2560.1400@0.0.2560.1400" timestamp="1602068476875" />
     <state x="781" y="345" key="SettingsEditor" timestamp="1601904277345">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="781" y="345" key="SettingsEditor/0.0.2560.1400/-2560.-18.2560.1400@0.0.2560.1400" timestamp="1601904277345" />
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1601904246859">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1602019501421">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/-2560.-18.2560.1400@0.0.2560.1400" timestamp="1601904246859" />
+    <state width="498" height="446" key="SwitcherDM/0.0.2560.1400/-2560.-18.2560.1400@0.0.2560.1400" timestamp="1602019501421" />
+    <state x="936" y="330" key="run.anything.popup" timestamp="1602062460923">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="936" y="330" key="run.anything.popup/0.0.2560.1400/-2560.-18.2560.1400@0.0.2560.1400" timestamp="1602062460923" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1602061639322">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/-2560.-18.2560.1400@0.0.2560.1400" timestamp="1602061639322" />
   </component>
 </project>

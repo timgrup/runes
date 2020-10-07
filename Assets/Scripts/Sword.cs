@@ -1,19 +1,30 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class Sword : MonoBehaviour, IWeapon
 {
-    public Stat damage { get; }
-    public int baseDamage { get; set; }
+    private Animator animator;
+    private Transform fighter; //Fighter is the character who carries this weapon
+    private int currentDamage;
+    private bool isDealingDamage; //True = Collider Trigger to Deal Damage
+    [SerializeField] private int _baseDamage; //Unity Inspector Variable for Base Damage (Interface)
+    public int baseDamage
+    {
+        get { return _baseDamage; }
+    }
 
     private void Start()
     {
-        baseDamage = 50;
+        animator = GetComponentInParent<Animator>();
+        fighter = animator.transform;
     }
+
 
     public void Attack(int damage)
     {
-        //ToDo: PlayAttackAnim
+        this.currentDamage = damage;
+        animator.SetTrigger("Attack_normal");
     }
 
     public void SpecialAttack()
@@ -21,13 +32,19 @@ public class Sword : MonoBehaviour, IWeapon
         //ToDo: Add Special Attack
     }
 
+    public void AllowDamage(bool d)
+    {
+        isDealingDamage = d;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        CharacterStats enemy = other.GetComponent<CharacterStats>();
-        if (enemy != null)
+        if (!isDealingDamage) return;
+        CharacterStats target = other.GetComponent<CharacterStats>();
+        if (target != null && other.transform != fighter)
         {
-            enemy.TakeDamage(baseDamage);
-            Debug.Log(enemy.currentHealth);
+            target.TakeDamage(currentDamage);
+            AllowDamage(false);
         }
     }
 }

@@ -3,22 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(NavMeshAgent), typeof(CharacterCombat))]
 public class EnemyController : MonoBehaviour, ICharacter
 {
     private NavMeshAgent agent;
     private Animator animator;
+    private CharacterCombat characterCombat;
 
     private Transform target;
     [SerializeField] private float chaseDistance = 1.0f;
+    [SerializeField] private float rotationSlerp = 5f;
 
-    private bool alive = true;
+    public bool alive { get; private set; } = true;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         target = PlayerManager.instance.player.transform;
-        animator = transform.Find("Body").GetComponent<Animator>();
+        animator = GetComponent<Animator>();
+        characterCombat = GetComponent<CharacterCombat>();
     }
 
     private void Update()
@@ -29,7 +32,13 @@ public class EnemyController : MonoBehaviour, ICharacter
 
         if (distance <= chaseDistance)
         {
-            agent.SetDestination(target.position);
+            if(!characterCombat.IsAttacking()) agent.SetDestination(target.position);
+            
+            if (distance <= agent.stoppingDistance && !characterCombat.IsAttacking())
+            {
+                characterCombat.Attack();
+            }
+
             FaceTarget();
         }
         else
@@ -44,7 +53,7 @@ public class EnemyController : MonoBehaviour, ICharacter
     {
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSlerp);
     }
 
     private void OnDrawGizmos()
@@ -52,11 +61,13 @@ public class EnemyController : MonoBehaviour, ICharacter
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, chaseDistance);
     }
-    
+
     public void Die()
     {
-        animator.SetTrigger("Die");
-        GetComponent<Collider>().enabled = false;
-        alive = false;
+        alive = false; //Set dead
+        animator.SetTrigger("Die"); //Play Die Animation
+        GetComponent<Collider>().enabled = false; //Disable Collider to move through
+        GameObject nameplate = transform.Find("Nameplate").gameObject; //Find Nameplate to deactivate it
+        if(nameplate != null) nameplate.SetActive(false);
     }
 }
