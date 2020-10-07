@@ -385,7 +385,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504447291}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.234475, y: 4, z: -17.53}
+  m_LocalPosition: {x: -49.6, y: 4, z: -50.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1096695463016056325}
@@ -444,6 +444,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseDistance: 25
   rotationSlerp: 15
+  patrolSpeed: 5
+  normalSpeed: 10
+  walkPointDistance: 30
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!136 &504447296
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1981,7 +1987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2035873819
 Transform:
   m_ObjectHideFlags: 0
@@ -2033,7 +2039,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseDistance: 20
-  rotationSlerp: 0
+  rotationSlerp: 5
+  patrolSpeed: 3
+  normalSpeed: 5
+  walkPointDistance: 18.42
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!136 &2035873822
 CapsuleCollider:
   m_ObjectHideFlags: 0

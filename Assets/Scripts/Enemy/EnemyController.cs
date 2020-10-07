@@ -11,8 +11,19 @@ public class EnemyController : MonoBehaviour, ICharacter
     private CharacterCombat characterCombat;
 
     private Transform target;
+    private Vector3 origin;
     [SerializeField] private float chaseDistance = 1.0f;
     [SerializeField] private float rotationSlerp = 5f;
+
+    [SerializeField] private float patrolSpeed = 3f;
+    [SerializeField] private float normalSpeed = 5f;
+    private float stoppingDistance;
+    
+    [SerializeField] private float walkPointDistance =  5f;
+    private Vector3 walkPoint;
+    private bool walkPointSet;
+
+    [SerializeField] private LayerMask groundMask;
 
     public bool alive { get; private set; } = true;
 
@@ -22,6 +33,8 @@ public class EnemyController : MonoBehaviour, ICharacter
         target = PlayerManager.instance.player.transform;
         animator = GetComponent<Animator>();
         characterCombat = GetComponent<CharacterCombat>();
+        origin = transform.position;
+        stoppingDistance = agent.stoppingDistance;
     }
 
     private void Update()
@@ -32,6 +45,10 @@ public class EnemyController : MonoBehaviour, ICharacter
 
         if (distance <= chaseDistance)
         {
+            //Set to normal Values
+            agent.speed = normalSpeed;
+            agent.stoppingDistance = stoppingDistance;
+            
             if (!characterCombat.IsAttacking())
             { 
                 agent.SetDestination(target.position);
@@ -43,13 +60,40 @@ public class EnemyController : MonoBehaviour, ICharacter
                 characterCombat.Attack();
             }
 
-        }
-        else
+        } else
         {
-            agent.ResetPath();
+            Patroling();
         }
         
         animator.SetFloat("Speed", agent.velocity.magnitude);
+    }
+
+    private void Patroling()
+    {
+        //Set to patrol speed
+        agent.speed = patrolSpeed;
+        agent.stoppingDistance = 0;
+        
+        if(!walkPointSet) SearchWalkpoint();
+        
+        if (walkPointSet)
+            agent.SetDestination(walkPoint);
+        
+        Vector3 distance = transform.position - walkPoint;
+        
+        if (distance.magnitude < 1f)
+            walkPointSet = false;
+    }
+
+    public void SearchWalkpoint()
+    {
+        float randomX = Random.Range(-walkPointDistance, walkPointDistance);
+        float randomZ = Random.Range(-walkPointDistance, walkPointDistance);
+        walkPoint = new Vector3(origin.x + randomX, transform.position.y, origin.z + randomZ);
+        if (Physics.Raycast(walkPoint, -transform.up, Mathf.Infinity, groundMask))
+        {
+            walkPointSet = true;
+        }
     }
 
     private void FaceTarget()

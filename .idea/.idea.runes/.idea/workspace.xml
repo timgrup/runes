@@ -30,7 +30,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.runes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.runes/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/DevScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DevScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickupCoin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupCoin.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +66,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Sword.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PickupCoin.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" />
       </list>
     </option>
@@ -119,6 +119,7 @@
       <workItem from="1602019180863" duration="5875000" />
       <workItem from="1602055305484" duration="15780000" />
       <workItem from="1602071927707" duration="644000" />
+      <workItem from="1602106575517" duration="2819000" />
     </task>
     <servers />
   </component>
@@ -171,9 +172,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="936" y="330" key="run.anything.popup/0.0.2560.1400/-2560.-18.2560.1400@0.0.2560.1400" timestamp="1602062460923" />
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1602061639322">
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1602108145381">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/-2560.-18.2560.1400@0.0.2560.1400" timestamp="1602061639322" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/-2560.-18.2560.1400@0.0.2560.1400" timestamp="1602108145381" />
   </component>
 </project>
