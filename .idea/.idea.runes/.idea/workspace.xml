@@ -26,26 +26,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="789b34ab-fd42-46af-ab66-dcd33df8b93c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ICharacter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.runes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.runes/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.runes/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.runes/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.runes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.runes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Warrok Animator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Warrok Animator.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/DevScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DevScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/IWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/IWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Stat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Stat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ICharacter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ICharacter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ICharacter.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sword.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sword.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Static Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Static Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickupCoin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupCoin.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,11 +61,13 @@
         <option value="$PROJECT_DIR$/Assets/AttackBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterStats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/IWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CharacterCombat.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ICharacter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CharacterCombat.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Sword.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PickupCoin.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" />
       </list>
     </option>
   </component>
@@ -130,7 +117,8 @@
       <workItem from="1602002602552" duration="942000" />
       <workItem from="1602013473890" duration="5465000" />
       <workItem from="1602019180863" duration="5875000" />
-      <workItem from="1602055305484" duration="14731000" />
+      <workItem from="1602055305484" duration="15780000" />
+      <workItem from="1602071927707" duration="644000" />
     </task>
     <servers />
   </component>

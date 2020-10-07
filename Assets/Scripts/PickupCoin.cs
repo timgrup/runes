@@ -12,7 +12,7 @@ public class PickupCoin : ItemPickup
     {
         base.Start();
         anim = GetComponent<Animator>();
-        currencyManager = GetComponent<CurrencyManager>();
+        currencyManager = CurrencyManager.instance;
     }
     
     public override void Interact()

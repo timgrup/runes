@@ -32,14 +32,17 @@ public class EnemyController : MonoBehaviour, ICharacter
 
         if (distance <= chaseDistance)
         {
-            if(!characterCombat.IsAttacking()) agent.SetDestination(target.position);
+            if (!characterCombat.IsAttacking())
+            { 
+                agent.SetDestination(target.position);
+                FaceTarget();
+            }
             
             if (distance <= agent.stoppingDistance && !characterCombat.IsAttacking())
             {
                 characterCombat.Attack();
             }
 
-            FaceTarget();
         }
         else
         {
