@@ -10,7 +10,6 @@ public class CharacterStats : MonoBehaviour
     public int currentHealth { get; private set; }
 
     public Stat armor;
-    public Stat damage;
 
 
     void Start()
@@ -31,6 +30,7 @@ public class CharacterStats : MonoBehaviour
     {
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
         currentHealth -= damage;
+        Debug.Log(name + " was hit: " + currentHealth + "HP");
 
         if (currentHealth <= 0)
         {
@@ -40,6 +40,7 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void Die()
     {
-        Debug.Log(transform.name + " died.");
+        ICharacter character = GetComponent<ICharacter>();
+        character?.Die();
     }
 }
